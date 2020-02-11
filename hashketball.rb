@@ -220,6 +220,21 @@ def most_points_scored
   high_scorer
 end
 
+
+def player_with_longest_name
+longest_name = nil
+  game_hash.each do |team, team_data|
+    team_info[:players].each do |player, player_data|
+      if player.length > longest_name
+        longest_name = player_data
+      else
+        longest_name
+      end
+    end
+  end
+  return longest_name
+end
+
 #def winning_team 
  # away = 0
   #home = 0
@@ -246,17 +261,3 @@ end
 #     return "It's a tie!"
 #   end
 # end
-
-def player_with_longest_name
-longest_name = nil
-  game_hash.each do |team, team_data|
-    team_info[:players].each do |player, player_data|
-      if player.length > longest_name
-        longest_name = player_data
-      else
-        longest_name
-      end
-    end
-  end
-  return longest_name
-end
