@@ -220,17 +220,17 @@ def most_points_scored
   high_scorer
 end
 
-def winning_team 
-  away = 0
-  home = 0
-  game_hash[:home].each do |players, data|
+#def winning_team 
+ # away = 0
+  #home = 0
+  #game_hash[:home].each do |players, data|
     #if players == :players
-      data.each do |points, value|
-      if points == :points
-        home += value
+   #   data.each do |points, value|
+    #  if points == :points
+      #  home += value
      #   end
-        binding.pry
-      end
+       # binding.pry
+      #end
     end
   end
  # game_hash[:away][:players].each do |name, value|
