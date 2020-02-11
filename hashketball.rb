@@ -231,18 +231,18 @@ end
      #   end
        # binding.pry
       #end
-    end
-  end
- # game_hash[:away][:players].each do |name, value|
-  #    if name == :points 
-   #     away += value
-    #end
-  #end
-  if home < away
-    return game_hash[:away][:team_name]
-  elsif away < home
-    return game_hash[:home][:team_name]
-  else 
-    return "It's a tie!"
-  end
-end
+#     end
+#   end
+# # game_hash[:away][:players].each do |name, value|
+#   #    if name == :points 
+#   #     away += value
+#     #end
+#   #end
+#   if home < away
+#     return game_hash[:away][:team_name]
+#   elsif away < home
+#     return game_hash[:home][:team_name]
+#   else 
+#     return "It's a tie!"
+#   end
+# end
