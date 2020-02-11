@@ -252,7 +252,7 @@ long_name = 0
   game_hash.each do |team, team_info|
     team_info[:players].each do |player|
       if player[:player_name].length > long_name
-        long_name = player_name
+        long_name = :player_name
       else
         long_name
       end
