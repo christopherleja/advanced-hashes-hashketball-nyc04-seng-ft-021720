@@ -233,7 +233,7 @@ end
       #end
 #     end
 #   end
-# # game_hash[:away][:players].each do |name, value|
+#  game_hash[:away][:players].each do |name, value|
 #   #    if name == :points 
 #   #     away += value
 #     #end
@@ -247,3 +247,10 @@ end
 #   end
 # end
 
+def player_with_longest_name
+long_name = 0
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name]
+
+end
