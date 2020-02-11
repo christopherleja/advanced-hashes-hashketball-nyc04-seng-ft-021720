@@ -241,9 +241,9 @@ most_steals = 0
   game_hash.each do |team, team_data|
     team_data[:players].each do |player, player_data|
       if longest_name.length < player[:player_name].length && most_steals < player[:steals]
-        return true 
-      else
-        nil
+      #   return true 
+      # else
+      #   nil
       end
     end
   end
