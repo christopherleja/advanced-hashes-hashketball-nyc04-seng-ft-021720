@@ -249,10 +249,11 @@ end
 
 def player_with_longest_name
 longest_name = 0
-  game_hash.each do |team, team_info|
-    team_info[:players].each do |name, value|
-      if name.length > longest_name
-        longest_name = name
+  game_hash.each do |team, team_data|
+    team_info[:players].each do |player, player_data|
+      binding.pry
+      if player.length > longest_name
+        longest_name = player_data
       else
         longest_name
       end
