@@ -228,10 +228,13 @@ def winning_team
       team.each do |attributes, data|
         if attributes == :players
           data.each do |player, value|
-            home += value[:points]
+            home_team_total += value[:points]
           end
         end
       end
+    else
+      team.each do |attributes, data|
+        
     end
   end
   home
