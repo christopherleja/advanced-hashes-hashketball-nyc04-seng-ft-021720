@@ -224,7 +224,7 @@ def winning_team
   away = 0
   home = 0
   game_hash.each do |place, team|
-    if place[:home] == :home
+    if place == :home
       team.each do |attributes, data|
         if attributes == :players
           data.each do |player|
