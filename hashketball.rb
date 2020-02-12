@@ -220,32 +220,45 @@ def most_points_scored
   high_scorer
 end
 
-def winning_team 
+def winning_team
   away = 0
   home = 0
-  game_hash[:home].each do |players, data|
-    if players == :players
-      data.each do |points, value|
-      if points == :points
-        home += value
+  game_hash.each do |place, team|
+    if place[:home] == :home
+      team.each do |attributes, data|
+        if attributes == :players
+          data.each do |player|
+            home += player[:score]
+          end
         end
-        binding.pry
       end
     end
   end
-  game_hash[:away][:players].each do |name, value|
-      if name == :points 
-       away += value
-    end
-  end
-  if home < away
-    return game_hash[:away][:team_name]
-  elsif away < home
-    return game_hash[:home][:team_name]
-  else 
-    return "It's a tie!"
-  end
+  home
 end
+      
+#     if players == :players
+#       data.each do |points, value|
+#       if points == :points
+#         home += value
+#         end
+#         binding.pry
+#       end
+#     end
+#   end
+#   game_hash[:away][:players].each do |name, value|
+#       if name == :points 
+#       away += value
+#     end
+#   end
+#   if home < away
+#     return game_hash[:away][:team_name]
+#   elsif away < home
+#     return game_hash[:home][:team_name]
+#   else 
+#     return "It's a tie!"
+#   end
+# end
 
 def player_with_longest_name
 longest_name = ""
