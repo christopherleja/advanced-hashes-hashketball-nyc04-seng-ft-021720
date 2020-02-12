@@ -234,7 +234,11 @@ def winning_team
       end
     else
       team.each do |attributes, data|
-        
+        if attributes == :players
+          data.each do |player, value|
+            away_team_total += value[:points]
+          end
+        end
     end
   end
   home
