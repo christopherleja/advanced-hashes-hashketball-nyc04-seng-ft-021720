@@ -227,9 +227,9 @@ def winning_team
     if place == :home
       team.each do |attributes, data|
         if attributes == :players
-          data.each do |player, value|
+          data.each do |player|
             binding.pry
-            home_team_total += value[:points]
+            home_team_total += player[:points]
           end
         end
       end
